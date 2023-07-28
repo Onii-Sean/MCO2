@@ -1,26 +1,33 @@
 package Model;
 
-import java.util.Collections;
-import java.util.Map;
 import java.util.HashMap;
-import java.util.TreeMap;
+import java.util.Map;
 
 /**
- * The Model.Denomination class represents a collection of denominations with their corresponding quantities.
- * It provides methods to update the denominations, calculate denominations for a given payment,
- * and display the current list of denominations.
+ * The `Denomination` class represents the denominations and their quantities in a vending machine.
+ * This class acts as a model in the MVC architecture.
+ * It holds the data related to the denominations and provides methods to interact with them.
+ * The controller can use these methods to manage the denominations.
+ * The view can use the getter methods to display the denominations to the user.
+ * The `Denomination` class doesn't contain any business logic specific to the vending machine itself.
+ * It mainly focuses on managing the denominations.
+ * Any business logic related to the vending machine should be implemented in the controller.
+ * The `Denomination` class doesn't directly interact with the user or other components.
+ * Any input/output and interactions with the user should be handled by the view and controller classes.
+ *
+ * By using a map to store the denominations and quantities, it provides a convenient way to access and update the denominations.
+ * The `Denomination` class encapsulates the internal details of managing denominations,
+ * allowing the controller to handle the business logic based on the available denominations.
  *
  * @author Sean Andrei Olores
  * @author Amiel Elijah Tenerife
  */
 public class Denomination {
-    /**
-     * The map that stores the denominations and their quantities.
-     */
+    // The map that stores the denominations and their quantities.
     private Map<Integer, Integer> denominationList;
 
     /**
-     * Constructs a new Model.Denomination object and initializes the default denominations and quantities.
+     * Constructs a new `Denomination` object and initializes the default denominations and quantities.
      * The default denominations are 1000, 500, 100, 50, 10, 5, and 1, each with an initial quantity of 5.
      */
     public Denomination() {
@@ -56,11 +63,10 @@ public class Denomination {
     /**
      * Calculates the denominations for a given payment amount based on the available denominations.
      *
-     * @param denominationList The map of available denominations and their quantities.
-     * @param payment          The payment amount to calculate denominations for.
+     * @param payment The payment amount to calculate denominations for.
      * @return A map containing the calculated denominations and their quantities.
      */
-    public static Map<Integer, Integer> calculateDenomination(Map<Integer, Integer> denominationList, int payment) {
+    public Map<Integer, Integer> calculateDenomination(int payment) {
         Map<Integer, Integer> result = new HashMap<>();
 
         for (Map.Entry<Integer, Integer> entry : denominationList.entrySet()) {
@@ -81,24 +87,19 @@ public class Denomination {
     }
 
     /**
-     * Displays the current list of denominations and their quantities in a formatted manner.
+     * Get the total amount of money in the denomination.
+     *
+     * @return The total amount of money in the denomination.
      */
-    public void displayDenominationList() {
-        System.out.println("---------------");
-        System.out.println(" DENOMINATIONS ");
-        System.out.println("---------------");
-        System.out.println("BILL\tPCS");
-        System.out.println("---------------");
+    public int getTotalMoneyInDenomination() {
+        int totalMoneyInside = 0;
 
-        TreeMap<Integer, Integer> sortedMap = new TreeMap<>(Collections.reverseOrder());
-        sortedMap.putAll(denominationList);
-
-        for (Map.Entry<Integer, Integer> entry : sortedMap.entrySet()) {
-            int key = entry.getKey();
-            int value = entry.getValue();
-            System.out.printf("%-7d\t%d%n", key, value);
+        for (Map.Entry<Integer, Integer> entry : denominationList.entrySet()) {
+            int denomination = entry.getKey();
+            int count = entry.getValue();
+            totalMoneyInside += denomination * count;
         }
 
-        System.out.println("---------------");
+        return totalMoneyInside;
     }
 }

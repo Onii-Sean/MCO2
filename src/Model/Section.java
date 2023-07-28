@@ -1,12 +1,27 @@
 package Model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
- * Represents a section with a name and an array of slots.
+ * The `Section` class represents a section in a vending machine with a name and an array of slots.
  * Each section can have multiple slots to store items.
- * The maximum number of slots per section is 9.
+ *
+ * This class acts as a model in the MVC architecture.
+ * It holds the data related to the section and provides methods to interact with the slots.
+ * The controller can use these methods to manage the slots in the section.
+ * The view can use the getter methods to display the section's information to the user.
+ * The `Section` class doesn't contain any business logic specific to the vending machine itself.
+ * It mainly focuses on managing the slots.
+ * Any business logic related to the vending machine should be implemented in the controller.
+ * The `Section` class doesn't directly interact with the user or other components.
+ * Any input/output and interactions with the user should be handled by the view and controller classes.
+ *
+ * Note: This class assumes that there will always be exactly 9 slots in a section.
+ * If the number of slots per section is variable, consider using a List instead of an array.
  *
  * @author Sean Andrei Olores
- * @auther Amiel Elijah Tenerife
+ * @author Amiel Elijah Tenerife
  */
 public class Section {
 
@@ -14,11 +29,13 @@ public class Section {
     private Slot[] slots;
 
     /**
-     * Constructs a new Model.Section with an empty array of slots.
-     * The array will have a length of 9, representing 9 available slots for items.
+     * Constructs a new `Section` with the given name.
+     *
+     * @param name The name of the section.
      */
-    public Section() {
-        slots = new Slot[9];
+    public Section(String name) {
+        this.name = name;
+        this.slots = new Slot[9];
     }
 
     /**
@@ -37,5 +54,14 @@ public class Section {
      */
     public void setName(String name) {
         this.name = name;
+    }
+
+    /**
+     * Get the list of all slots in the section.
+     *
+     * @return The list of slots in the section.
+     */
+    public Slot[] getSlots() {
+        return slots;
     }
 }

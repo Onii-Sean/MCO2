@@ -1,9 +1,19 @@
 package Model;
 
 /**
- * The Model.Item class represents an item in a vending machine.
+ * The `Item` class represents an item in a vending machine.
  * Each item has a name, price, and calorie information.
  * It also provides a maintenance feature to update the item's price.
+ *
+ * This class acts as a model in the MVC architecture.
+ * It holds the data related to the item and provides methods to interact with its attributes.
+ * The controller can use these methods to update the item's price.
+ * The view can use the getter methods to display the item's information to the user.
+ * The `Item` class doesn't contain any business logic specific to the vending machine itself.
+ * It mainly focuses on managing the item's attributes.
+ * Any business logic related to the vending machine should be implemented in the controller.
+ * The `Item` class doesn't directly interact with the user.
+ * Any input/output should be handled by the view and controller classes.
  *
  * @author Sean Andrei Olores
  * @author Amiel Elijah Tenerife
@@ -14,11 +24,11 @@ public class Item {
     private final int calories;
 
     /**
-     * Constructs a Model.Item object with the specified name, price, and calories.
+     * Constructs a new `Item` object with the specified name, price, and calories.
      *
-     * @param name     the name of the item
-     * @param price    the price of the item
-     * @param calories the calories of the item
+     * @param name     The name of the item.
+     * @param price    The price of the item.
+     * @param calories The calories of the item.
      */
     public Item(String name, int price, int calories) {
         this.name = name;
@@ -29,7 +39,7 @@ public class Item {
     /**
      * Returns the name of the item.
      *
-     * @return the name of the item
+     * @return The name of the item.
      */
     public String getName() {
         return name;
@@ -38,7 +48,7 @@ public class Item {
     /**
      * Returns the price of the item.
      *
-     * @return the price of the item
+     * @return The price of the item.
      */
     public int getPrice() {
         return price;
@@ -47,7 +57,7 @@ public class Item {
     /**
      * Returns the calories of the item.
      *
-     * @return the calories of the item
+     * @return The calories of the item.
      */
     public int getCalories() {
         return calories;
@@ -56,10 +66,9 @@ public class Item {
     /**
      * Sets a new price for the item. This is a maintenance feature.
      *
-     * @param price the new price to set for the item
+     * @param price The new price to set for the item.
      */
     public void setPrice(int price) {
         this.price = price;
     }
 }
-
