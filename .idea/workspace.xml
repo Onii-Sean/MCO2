@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="731ae56b-69be-4920-b43b-79a1836dc60c" name="Changes" comment="Initial commit for MC02">
-      <change afterPath="$PROJECT_DIR$/src/Controller/VendingMachineController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/VendingMachineView.java" afterDir="false" />
+    <list default="true" id="731ae56b-69be-4920-b43b-79a1836dc60c" name="Changes" comment="Revamped Model&#10;New View&#10;New Controller">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Denomination.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Denomination.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Section.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Section.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Slot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Slot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/VendingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/VendingMachine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tester.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +73,9 @@
       <workItem from="1690528152642" duration="3077000" />
       <workItem from="1690533668654" duration="4096000" />
       <workItem from="1690547097536" duration="3359000" />
-      <workItem from="1690553815873" duration="13893000" />
+      <workItem from="1690553815873" duration="16373000" />
+      <workItem from="1690579560960" duration="2457000" />
+      <workItem from="1690625393424" duration="6648000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit for MC02">
       <created>1690299973319</created>
@@ -90,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690299973319</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Revamped Model&#10;New View&#10;New Controller">
+      <created>1690574000344</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1690574000344</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +126,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Java Classes so far" />
     <MESSAGE value="Initial commit for MC02" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit for MC02" />
+    <MESSAGE value="Revamped Model&#10;New View&#10;New Controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revamped Model&#10;New View&#10;New Controller" />
   </component>
 </project>
